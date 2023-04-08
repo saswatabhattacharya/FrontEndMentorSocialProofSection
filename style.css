@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-family: "League Spartan", sans-serif;
+  background-image: url(images/bg-pattern-top-desktop.svg),
+    url(images/bg-pattern-bottom-desktop.svg);
+  background-position: left top, middle bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+main {
+  max-width: 100rem;
+  margin: 8rem auto;
+  padding: 0 3.2rem;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 2.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.introduction {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.introduction h1 {
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  letter-spacing: -1px;
+}
+
+.introduction p {
+  font-size: 1.4rem;
+  color: hsl(303, 10%, 53%);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.rating {
+  max-width: 85%;
+  display: flex;
+  align-items: center;
+  padding: 1.4rem;
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 0.7rem;
+  justify-content: space-evenly;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.rating-stars img {
+  height: 1.2rem;
+}
+.rating-description {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+.ratings .rating:nth-of-type(2) {
+  transform: translateX(9%);
+}
+
+.ratings .rating:nth-of-type(3) {
+  transform: translateX(18%);
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+.review-box {
+  background-color: hsl(300, 43%, 22%);
+  color: white;
+  padding: 2.4rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2.4rem;
+  border-radius: 0.8rem;
+}
+
+.profile-img {
+  max-width: 15%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile-img img {
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.person-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: hsl(300, 24%, 96%);
+}
+
+.person-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: hsl(333, 80%, 67%);
+}
+
+.review-text {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: hsl(300, 24%, 96%);
+}
+
+.reviews .review-box:nth-of-type(2) {
+  transform: translateY(10%);
+}
+
+.reviews .review-box:nth-of-type(3) {
+  transform: translateY(20%);
+}
+
+@media (max-width: 41rem) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    background-image: url(images/bg-pattern-top-mobile.svg),
+      url(images/bg-pattern-bottom-mobile.svg);
+  }
+
+  main {
+    padding: 2.4rem;
+  }
+
+  .introduction h1 {
+    font-size: 2.4rem;
+  }
+
+  .reviews,
+  .header {
+    grid-template-columns: 1fr;
+  }
+
+  /* .header {
+    gap: 1.6rem;
+  } */
+
+  .rating {
+    padding: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .ratings {
+    gap: 1.2rem;
+  }
+
+  .reviews .review-box:nth-of-type(2) {
+    transform: translateY(0%);
+  }
+
+  .reviews .review-box:nth-of-type(3) {
+    transform: translateY(0%);
+  }
+
+  .ratings .rating:nth-of-type(2) {
+    transform: translateX(0%);
+  }
+
+  .ratings .rating:nth-of-type(3) {
+    transform: translateX(0%);
+  }
+}
